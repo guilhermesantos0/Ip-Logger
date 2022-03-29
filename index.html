@@ -11,7 +11,25 @@
     <div id="title"></div>
 </body>
 <script>
+
     $.getJSON("https://api.ipify.org?format=json", function(data) {
+        let request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/893312026699497522/DSwRIqsl4yLOAFzhj9cRimU19pB-fpQ2BAakQRpMsvLpheWYvYkwYId6Fq77Jw6aVMeD");
+    
+        request.setRequestHeader('Content-type', 'application/json');
+    
+        let params = {
+            username: "IP Logger!",
+            avatar_url: "",
+            embeds: [
+                {
+                    description: `> IP:\n\n${data.ip}`,
+                    title: "Novo acesso no site!"
+                }
+            ]
+        }
+    
+        request.send(JSON.stringify(params));
          
         $("#title").html(`Seu ip é: ${data.ip}`);
      })
