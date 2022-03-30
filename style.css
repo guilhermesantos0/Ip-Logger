@@ -35,7 +35,7 @@ body{
 
 #container .line{
     height: 1vh;
-    width: 50vh;
+    width: 50%;
     background: linear-gradient(90deg, rgb(18, 144, 218), rgb(8, 97, 180), rgb(18, 144, 218));
     background-size: 400% 400%;
     animation: animate 5s ease infinite;
@@ -43,7 +43,7 @@ body{
 
 #container #userIP{
     font-size: 7vh;
-    margin-top: 2vh;
+    margin-top: 2vw;
     background-image: linear-gradient(45deg, rgb(0, 0, 0), rgb(46, 46, 46));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
@@ -76,4 +76,42 @@ body{
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@media (max-width: 500px){
+    body{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+    }
+    #container{
+        width: 100vw;
+    }
+
+    #container #title{
+        font-size: 5vw;
+    }
+
+    #container #userIP{
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 950px){
+    body{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+    }
+    #container{
+        width: 80vw;
+    }
+
+    #container #title{
+        font-size: 7vh;
+    }
+
+    #container #userIP{
+        font-size: 6vh;
+    }
 }
